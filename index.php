@@ -5,4 +5,4 @@ Center Tom Thème !
 
 
 
-<?php get_footer() ?>
+<?php get_footer() ?>qsd
