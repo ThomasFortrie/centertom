@@ -22,6 +22,11 @@ function theme_register_asset(){
     wp_enqueue_script('bootstrap');
 };
 
+function montheme_title_separator (){
+    return ' | ';
+}
+
 
 add_action('after_setup_theme', 'supportDuTheme');
 add_action('wp_enqueue_scripts','theme_register_asset');
+add_filter('document_title_separator', 'montheme_title_separator');
