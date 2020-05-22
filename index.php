@@ -9,7 +9,7 @@
                 <div class="card" style="width: 18rem;">
                    <?php the_post_thumbnail('medium', ['class' => 'card-img-top', 'atl' => '', 'style' => 'heigth: auto'] ) ?>
                     <div class="card-body">
-                        <h5 class="card-title"><?php the_title() ?> - par <?php the_author() ?></h5>
+                        <h5 class="card-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a><br><small> - par <?php the_author() ?></small></h5>
                         <br><? the_category() ?>
                         <p class="card-text">
                             <?php the_excerpt() ?>
