@@ -7,10 +7,11 @@
         <?php while (have_posts()) : the_post(); ?>
             <div class="col-sm-4">
                 <div class="card" style="width: 18rem;">
-                   <?php the_post_thumbnail('medium', ['class' => 'card-img-top', 'atl' => '', 'style' => 'heigth: auto'] ) ?>
+                    <?php the_post_thumbnail('medium', ['class' => 'card-img-top', 'atl' => '', 'style' => 'heigth: auto']) ?>
                     <div class="card-body">
                         <h5 class="card-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a><br><small> - par <?php the_author() ?></small></h5>
-                        <br><? the_category() ?>
+                        <br>
+                        <? the_category() ?>
                         <p class="card-text">
                             <?php the_excerpt() ?>
                         </p>
@@ -22,7 +23,13 @@
 
 
         <?php endwhile ?>
+
+
     </div>
+    <div class="row justify-content-center my-4">
+    <?php montheme_pagination() ?>
+    </div>
+
 <?php else : ?>
     <h1>Pas d'articles</h1>
 <?php endif; ?>

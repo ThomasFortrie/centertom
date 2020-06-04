@@ -9,7 +9,8 @@
 
 <body>
     <div class="container-xl">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+        
 
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -19,7 +20,7 @@
                     'menu_class' => 'navbar-nav mr-auto'
                 ]); ?>
 
-                
-        <?php echo (get_search_form()) ?>
+
+                <?php echo (get_search_form()) ?>
             </div>
         </nav>

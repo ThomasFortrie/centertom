@@ -43,6 +43,30 @@ function montheme_menu_link_class($attributes)
     return $attributes;
 }
 
+function montheme_pagination()
+{
+    $pages = paginate_links(['type' => 'array']);
+    if($pages === null){
+        return;
+    }
+    echo '<nav aria-label="Pagination my-4">';
+    echo '<ul class="pagination">';
+    foreach ($pages as $page) {
+        $active = strpos($page, 'current') !== false;
+        $class = 'page-item';
+
+        if ($active) {
+            $class .= ' active';
+        }
+
+        echo '<li class="' . $class . '">';
+        echo str_replace('page-numbers', 'page-link', $page);
+        echo '</li>';
+    }
+    echo '</ul>';
+    echo '</nav>';
+}
+
 
 add_action('after_setup_theme', 'supportDuTheme');
 add_action('wp_enqueue_scripts', 'theme_register_asset');
